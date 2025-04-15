@@ -1,4 +1,5 @@
 {
+    "python.defaultInterpreterPath": "/opt/anaconda3/bin/python",
     "cSpell.words": [
         "openai"
     ]
