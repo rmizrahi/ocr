@@ -2,6 +2,7 @@ from openai import OpenAI
 from pprint import pprint
 from olmocr.pipeline import build_page_query
 
+query = 'await build_page_query("~/code/ocr/docs/The New Anthem.pdf", page=1, target_longest_image_dim=1024, target_anchor_text_len=60)'
 # Assuming LM Studio is running locally
 client = OpenAI(base_url="http://localhost:1234/v1", api_key="lm-studio", timeout=60)
 
@@ -11,7 +12,7 @@ page_number = 1
 
 # Use olmocr to build the query (simplified example)
 # Note: build_page_query needs to be adapted to your olmocr version
-pdf_content = build_page_query(pdf_path, page_number)
+pdf_content = query # build_page_query(pdf_path, page_number)
 
 # Send the query to the LM Studio model
 response = client.chat.completions.create(
