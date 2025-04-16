@@ -3,6 +3,7 @@ from pprint import pprint
 from olmocr.pipeline import build_page_query
 
 query = 'await build_page_query("~/code/ocr/docs/The New Anthem.pdf", page=1, target_longest_image_dim=1024, target_anchor_text_len=60)'
+query
 # Assuming LM Studio is running locally
 client = OpenAI(base_url="http://localhost:1234/v1", api_key="lm-studio", timeout=60)
 
